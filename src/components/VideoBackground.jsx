@@ -1,14 +1,19 @@
 
-import React from 'react'
+import DarkVeil from './DarkVeil'
 
 export const VideoBackground = () => {
   return (
     <>
       <div className="video-background">
-        <video autoPlay loop muted playsInline poster="/videos/marvel_intro.mp4">
-          <source src="/videos/marvel_intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <DarkVeil
+          hueShift={15}
+          noiseIntensity={0.03}
+          scanlineIntensity={0.05}
+          speed={0.3}
+          scanlineFrequency={80}
+          warpAmount={0.08}
+          resolutionScale={1}
+        />
       </div>
       <div className="video-overlay"></div>
     </>
